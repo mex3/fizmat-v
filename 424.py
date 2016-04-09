@@ -1,17 +1,33 @@
 #http://informatics.mccme.ru/mod/statements/view3.php?chapterid=424#1
-d, l, k = map(int, input().split())
-
-
-MonthNames = ('', 'January', 'February', 'March', 'April', 'May', 'June', 'July', 'August', 'September', 'October', 'November', 'December')
-DayOfTheWeek = ('Monday', 'Tuesday', 'Wednesday', 'Thursday', 'Friday', 'Saturday', 'Sunday')
-MonthNums = {'January': 1, 'February': 2, 'March': 3, 'April': 4, 'May': 5, 'June': 6, 'July': 7, 'August': 8, 'September': 9, 'October': 10, 'November': 11, 'December': 12}
-DayNums = {'Monday': 1, 'Tuesday': 2, 'Wednesday': 3, 'Thursday': 4, 'Friday': 5, 'Saturday': 6, 'Sunday': 7}
-Months = (0, 31, 28, 31, 30, 31, 30, 31, 31, 30, 31, 30, 31)
-
-fout = open("output.txt", "w")
-# days = ((0, 31, 28, 31, 30, 31, 30, 31, 31, 30, 31, 30, 31), (0, 31, 29, 31, 30, 31, 30, 31, 31, 30, 31, 30, 31))
-day_start, l, k = map(int, fin.readline().split())
-column = day_start
-weeks_month = [1] * 13
-
-fout.close()
+d, k, l = map(int, input().split())
+#print(d,k,l)
+j = []
+h = 1 #счёт дней недели
+z = 0 #счёт дней месяца
+mes = 1 #счёт номера месяца
+s = 0 #ограничение по неделям - снос столбцов
+n = l
+c = []
+if k == 0:
+    if mes == 1 or 3 or 5 or 7 or 8 or 10 or 12:
+        m = 31
+    else:
+        m = 30
+    while mes <= 12:
+        while z <= m:
+            s += 7
+            if s > m:
+                s = m
+                k = 1
+            while n <= s:
+                c += [h]
+                h += 1
+                z += 1
+                n += 1
+            j += [[c]]
+            c = []
+            if k == 1:
+                break
+        mes += 1
+        print(j)
+        j = []
