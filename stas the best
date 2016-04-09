@@ -1,0 +1,2 @@
+n = 100
+print ('stas the best ' * n)
