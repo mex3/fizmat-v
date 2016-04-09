@@ -4,6 +4,8 @@
 Скачиваем git под Windows:
 https://git-scm.com/download/win
 
+Читаем документацию по ссылке: https://github.com/mex3/fizmat-v/wiki
+
 Чтобы скачать себе репозиторий на компьютер, используется команда:
 
 git clone https://github.com/mex3/fizmat-v
