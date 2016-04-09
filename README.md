@@ -9,6 +9,9 @@ https://git-scm.com/download/win
 git clone https://github.com/mex3/fizmat-v
 
 
+
 Как работать с командной строкой?
+
 ls #список файлов в директории
+
 cd <путь> #перейти в каталог <путь>
