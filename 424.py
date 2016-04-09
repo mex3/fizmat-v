@@ -9,11 +9,11 @@ s = 0 #ограничение по неделям - снос столбцов
 n = l
 c = []
 if k == 0:
-    if mes == 1 or 3 or 5 or 7 or 8 or 10 or 12:
-        m = 31
-    else:
-        m = 30
     while mes <= 12:
+        if mes == 1 or 3 or 5 or 7 or 8 or 10 or 12:
+            m = 31
+        else:
+            m = 30        
         while z <= m:
             s += 7
             if s > m:
