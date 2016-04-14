@@ -1,35 +1,52 @@
 #http://informatics.mccme.ru/mod/statements/view3.php?chapterid=424#1
-d, k, l = map(int, input().split())
-#print(d,k,l)
-j = []
-h = 1 #счёт дней недели
-z = 0 #счёт дней месяца
-mes = 1 #счёт номера месяца
-s = 0 #ограничение по неделям - снос столбцов
-n = l
-c = []
-if k == 0:
+d, l, k = map(int, input().split())
+mes = 1
+ned = 1
+day = 1
+dayses = 1
+kal = []
+need = []
+first = 1
+if l == 0:
     while mes <= 12:
-        if mes == 1 or 3 or 5 or 7 or 8 or 10 or 12:
-            m = 31
+        if mes == 1 or mes == 3 or mes == 5 or mes == 7 or mes == 8 or mes == 10 or mes == 12:
+            days = 31
+        elif mes == 2:
+            days = 28
         else:
-            m = 30        
-        while z <= m:
-            s += 7
-            if s > m:
-                s = m
-                k = 1
-            while n <= s:
-                c += [h]
-                h += 1
-                z += 1
-                n += 1
-            j += [[c]]
-            c = []
-            if k == 1:
-                break
+            days = 30
+        while ned <= 4:
+            while dayses <= 7*ned:
+                if day < days+1:
+                    need += [day]
+                    if first == 1 and day == 7-d+1:
+                        dayses = 1
+                        day += 1
+                        break
+                    day += 1
+                dayses += 1
+            if need != []:
+                kal += [need]
+            need = []
+            if first != 1:
+                ned += 1
+            first = 0
+        while days >= day > 28:
+            need += [day]
+            day += 1
+            dayses += 1
+        if need != []:
+            kal += [need]
+        ######################
+        print(kal)          ##
+        ######################
+        ned = 1
+        day = 1
+        dayses = 1
+        d = len(kal[len(kal)-1]) + 1
+        kal = []
+        need = []
+        first = 1
         mes += 1
-        print(j)
-        j = []
-# короче сейчас эта прога делает вписок из первого месяца, причём построчно(т.е. горизонтально), как его перевернуть? -
+# короче сейчас эта прога делает списки из всех месяцев, причём построчно(т.е. горизонтально), как их перевернуть? -
 # - типа транспонирования матрицы...
