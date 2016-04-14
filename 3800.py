@@ -1,6 +1,8 @@
 #http://informatics.mccme.ru/mod/statements/view3.php?id=3962&chapterid=3800#1
 #Рекурсия! Должна быть рекурсия!
 
+#yes it works
+
 
 def power(a, n):
     if n == 0:
