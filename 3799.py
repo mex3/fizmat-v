@@ -15,3 +15,14 @@ if IsPrime(int(input())):
     print('YES')
 else:
     print('NO')
+Вот мой код. Он непроходит несколько тестов из-за превышения максимального времени.    
+def IsPrime(n):
+    i = 2
+    while n % i != 0:
+        i = i + 1
+    if i == n:
+        return 'YES'
+    else:
+        return 'NO'
+ 
+print(IsPrime(int(input())))
