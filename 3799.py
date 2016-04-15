@@ -16,7 +16,7 @@ if IsPrime(int(input())):
 else:
     print('NO')
     
-Вот мой код. Он непроходит несколько тестов из-за превышения максимального времени (marytomilina).
+#Вот мой код. Он непроходит несколько тестов из-за превышения максимального времени (marytomilina).
 def IsPrime(n):
     i = 2
     while n % i != 0:
@@ -27,3 +27,5 @@ def IsPrime(n):
         return 'NO'
  
 print(IsPrime(int(input())))
+
+#ты проверяешь все числа от 2 до n, а достаточно до корня n (russiandeveloper17).
