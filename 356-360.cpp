@@ -41,4 +41,11 @@ for i in range(n):
             mm = x
             ms = sum(s)
 print(mn)
-#3 из 5 - это ведь несколько, да?
+
+#D:
+n, m = map(int, input().split())
+l = []
+for i in range(n):
+    l.append(sum(map(int, input().split())))
+print(l.count(max(l)))
+#this code doesn't work right, and I don't know why
