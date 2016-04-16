@@ -29,3 +29,12 @@ def IsPrime(n):
 print(IsPrime(int(input())))
 
 #ты проверяешь все числа от 2 до n, а достаточно до корня n (russiandeveloper17).
+#Спасибо, russiandeveloper17!
+#Теперь решение на ОК в informatics
+def IsPrime(n):
+    for i in range(2, int(n ** 0.5) + 1):
+        if n % i == 0:
+            return 'NO'
+    return 'YES'
+ 
+print(IsPrime(int(input())))
