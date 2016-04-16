@@ -9,7 +9,6 @@ for i in range(n):
         mx = x
         mn = i
 print(mx, mn)
-
 #B:
 n, m = map(int, input().split())
 mr, mn, mm = 0, 0, 0
