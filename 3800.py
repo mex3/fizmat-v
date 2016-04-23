@@ -4,13 +4,13 @@
 #yes it works
 
 
-def power(a, n):
-    if n == 0:
+def power(a, n):   #Функция возведения в степень
+    if n == 0:     #Разбор случая, в ктором степень равна 0
         return 1
-    return(a * power(a, n - 1))
-a = input()
-try:
-    a = int(a)
+    return(a * power(a, n - 1)) #Рекурсия, возводим в n-1 (a^n = a * a^n-1)
+a = input() #Входные данные
+try: 
+    a = int(a)    #Ну здесь все понятно
 except:
     a = float(a)
     n = int(input())
