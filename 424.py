@@ -16,8 +16,10 @@ ned = 1
 day = 1
 dayses = 1
 kal = []
+kalkal = []
 need = []
 first = 1
+qwe = []
 mess = ["January","February","March","April","May","June","July","August","September","October","November","December"]
 while mes <= 12:
     if mes == 1 or mes == 3 or mes == 5 or mes == 7 or mes == 8 or mes == 10 or mes == 12:
@@ -69,12 +71,13 @@ while mes <= 12:
         d = 1
     c = 7
     b = len(kal)
-    for k in range(b):
+    for m in range(b):
         for i in range(c):
-            if kal[k][i] == ' ':
-                kal[k][i] = '  '
+            if kal[m][i] == ' ':
+                kal[m][i] = '  '
     print(mess[mes-1])
     Transpose(kal)
+    kalkal += [kal]
     ned = 1
     day = 1
     dayses = 1
@@ -82,3 +85,22 @@ while mes <= 12:
     need = []
     first = 1
     mes += 1
+print(kalkal)
+for c in range (k):
+    for m in range (12):
+        print(kalkal[m][c])
+        qwe += [kalkal[m][c] + ["   "]]
+print(qwe,k)
+cvb = ""
+zxc = ""
+n = 0
+while n < 12:
+    n += k
+    qn = n
+    for i in range(n-k,n):
+        qn += 1
+        for m in range(7):
+            cvb += str(qwe[i][m])
+        cvb += "   "
+    print(cvb)
+    cvb = ""
