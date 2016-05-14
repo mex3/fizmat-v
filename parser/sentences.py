@@ -1,6 +1,6 @@
 #Берет абзацы из paragraphs и разбивает на отдельные предложения, сохраняя их в sentences
 
-from os import listdir #this is a magical function that makes a list of files in a directory
+from os import listdir #this is a magical function that makes a list of files' names in a directory
 
 res = []
 for filename in listdir(paragraphs):
