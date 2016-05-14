@@ -76,6 +76,8 @@ while mes <= 12:
             if kal[m][i] == ' ':
                 kal[m][i] = '  '
     print(mess[mes-1])
+    if len(kal) < 6:
+        kal.append(['  ','  ','  ','  ','  ','  ','  '])
     Transpose(kal)
     kalkal += [kal]
     ned = 1
@@ -85,22 +87,32 @@ while mes <= 12:
     need = []
     first = 1
     mes += 1
-print(kalkal)
 for c in range (k):
     for m in range (12):
-        print(kalkal[m][c])
         qwe += [kalkal[m][c] + ["   "]]
-print(qwe,k)
-cvb = ""
-zxc = ""
 n = 0
+tyg = []
+tyr = []
+tygr = []
+print(kalkal)
 while n < 12:
-    n += k
-    qn = n
-    for i in range(n-k,n):
-        qn += 1
-        for m in range(7):
-            cvb += str(qwe[i][m])
-        cvb += "   "
-    print(cvb)
-    cvb = ""
+    for j in range(7):
+        for i in range(len(kalkal[n])):
+            tyg += [kalkal[n][i][j]]
+        tyr += [tyg]
+        tyg = []
+    tygr += [tyr]
+    tyr = []
+    n += 1
+hj = ""
+nd = ""
+for i in range(7):
+    for j in range(12):
+        fusk = " ".join(tygr[j][i])
+        if j % k == 0:
+            1
+            #nd = '\n'
+        else:
+            nd = ''
+        print(fusk, end=nd)
+    print("")
